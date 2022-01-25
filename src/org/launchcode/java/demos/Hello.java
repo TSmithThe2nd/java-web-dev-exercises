@@ -22,6 +22,11 @@ public class Hello {
 
         System.out.println(var.charAt(5));
 
+        int[] someInts=new int [10];
+
+
+
+
 
 
     }
