@@ -14,19 +14,22 @@ public class stringSearch {
         System.out.println("Search for a word or phrase: ");
         String userSearch=input.next();
 
-//        stringing methods
+//        stringing methods together to solve problem
 //        System.out.println(alice.toUpperCase().contains(userSearch.toUpperCase()));
 
-//        step by step
+//        breaking problem into smaller pieces
         userSearch=userSearch.toLowerCase();
         alice= alice.toLowerCase();
 
-//        add step 5 code, removes user search from string
-        String[] wordIndex= alice.split(userSearch);
         boolean result=alice.contains(userSearch);
+//        add step 5 code, removes user search from string
+        if(alice.contains(userSearch)){
+            alice= alice.replace(userSearch, "");
+
+        }
 
         System.out.println(result);
-        System.out.println(wordIndex);
+        System.out.println(alice);
 
     }
 }
