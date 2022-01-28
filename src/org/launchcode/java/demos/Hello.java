@@ -1,33 +1,25 @@
 package org.launchcode.java.demos;
 
+import org.launchcode.java.demos.lsn4classes2.Course;
+import org.launchcode.java.demos.lsn4classes2.Student;
+import org.launchcode.java.demos.lsn4classes2.Teacher;
+
+import java.util.ArrayList;
+
 /**
  * From "Java Web Development"
  */
 public class Hello {
     public static void main(String[] args) {
-        String greeting="Hello, World";
-        String var=" Launch Code";
+        Student me= new Student("Thomas",1,1,4.0);
+        Teacher you= new Teacher("Tim", "Smoh","JavaScript", 5);
+        System.out.println(me.getGpa());
+        ArrayList<Student> roster= new ArrayList<>();
+        roster.add(me);
 
-        System.out.println(greeting);
+        Course JavaScript= new Course("JavaScript", you, roster);
 
-        System.out.println("should print var w/o white space in front "+ var.trim());
-//    Experimenting with stacking
-        var=var.substring(var.indexOf('L'),var.indexOf('h')+1) +var.substring(var.indexOf('C'),var.indexOf('e')+1);
-
-        System.out.println("Should print var with no white space "+var);
-
-        var=var.toUpperCase();
-
-        System.out.println("should print all caps"+ var);
-
-        System.out.println(var.charAt(5));
-
-        int[] someInts=new int [10];
-
-
-
-
-
+        System.out.println(JavaScript.getTopic());
 
     }
 }

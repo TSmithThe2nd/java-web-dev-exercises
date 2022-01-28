@@ -49,7 +49,7 @@ public class Student {
         return name;
     }
 
-    public int getStudentId() {
+    private int getStudentId() {
         return studentId;
     }
 
